@@ -1,10 +1,15 @@
 {
   "name": "@functai-schemas/text",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "Text schema for Functional AI",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "create_schema": "echo \"declare const schema: $(cat schema.json); export default schema; export type Schema = typeof schema\" > schema.d.ts",
+    "create_index": "echo \"import schema from './schema.json'; import { Schema } from './schema'; const _schema = { ...schema } as Schema; export default _schema;\" > index.ts",
+    "prettify_typescript": "tsc --pretty",
+    "build_typescript": "tsc",
+    "build": "run-s create_schema create_index prettify_typescript build_typescript",
+    "test": "echo-cli \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -19,5 +24,9 @@
   "bugs": {
     "url": "https://github.com/functai/schemas/issues"
   },
-  "homepage": "https://github.com/functai/schemas/tree/master/$schemas/text"
+  "homepage": "https://github.com/functai/schemas/tree/master/$schemas/text",
+
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
 }

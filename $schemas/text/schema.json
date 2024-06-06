@@ -1,4 +1,11 @@
 {
-  "type": "string",
-  "name": "Text schema"
+  "type": "object",
+  "name": "Text schema",
+  "properties": {
+    "text": {
+      "type": "string",
+      "description": "the text"
+    }
+  },
+  "required": ["text"]
 }

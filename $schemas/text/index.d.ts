@@ -1,5 +1,12 @@
-declare const $schema: {
-    readonly type: string;
-    readonly name: string;
+declare const _schema: {
+    type: "object";
+    name: "Text schema";
+    properties: {
+        text: {
+            type: "string";
+            description: "the text";
+        };
+    };
+    required: ["text"];
 };
-export default $schema;
+export default _schema;
