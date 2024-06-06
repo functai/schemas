@@ -1,0 +1,23 @@
+{
+  "name": "@functai-schemas/hello-world",
+  "version": "1.0.0",
+  "description": "Hello World schema for Functional AI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/functai/schemas.git"
+  },
+  "keywords": [
+    "ai",
+    "schema"
+  ],
+  "author": "Ribhararnus Pracutiar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/functai/schemas/issues"
+  },
+  "homepage": "https://github.com/functai/schemas/tree/master/$schemas/hello-world"
+}

@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "outDir": ".",
+    "module": "NodeNext",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "moduleResolution": "NodeNext",
+    "target": "es2016",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "noEmit": false,
+    "declaration": true
+  },
+  "files": ["index.ts"]
+}
