@@ -19,7 +19,8 @@ jobs:
           predicate-quantifier: "every"
           filters: |
             schemas:
-              - '!**/*.json'
+              - '\$schema/**'
+              - '*.json'
   build_and_commit:
     needs: changes
     if: ${{ needs.changes.outputs.schemas == 'true' }}
