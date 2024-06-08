@@ -38,7 +38,7 @@ jobs:
             cd $filedir
             npm ci
             npm run build
-            cd ./
+            cd /
           done
       - uses: EndBug/add-and-commit@v9
         with:
