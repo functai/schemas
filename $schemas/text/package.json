@@ -1,6 +1,6 @@
 {
   "name": "@functai-schemas/text",
-  "version": "1.3.11",
+  "version": "1.3.12",
   "description": "Text schema for Functional AI",
   "main": "index.js",
   "scripts": {
