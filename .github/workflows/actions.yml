@@ -1,4 +1,4 @@
-name: FunctAI Schemas Action
+name: FunctAI Schema Build and Publish Actions
 run-name: FunctAI detect new schemas by ${{ github.actor }} and will publish to npm soon 🚀
 on:
   push:
@@ -34,6 +34,7 @@ jobs:
           for path in ${{ needs.changes.outputs.schema_files  }}; do
             dir=$(dirname $path)
             cd $dir
+            npm ci
             npm run build
           done
       - uses: EndBug/add-and-commit@v9
