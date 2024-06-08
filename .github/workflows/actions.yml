@@ -10,6 +10,7 @@ jobs:
     outputs:
       schemas: ${{ steps.filter.outputs.schemas }}
     steps:
+      - uses: actions/checkout@v4
       - uses: dorny/paths-filter@v3.0.2
         id: filter
         with:
