@@ -1,6 +1,7 @@
 declare const _schema: {
     type: "object";
-    name: "Text schema";
+    title: "Text Schema";
+    description: "Text schema is for plain text";
     properties: {
         text: {
             type: "string";

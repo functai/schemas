@@ -1,6 +1,7 @@
 declare const _schema: {
     type: "object";
-    name: "Hello World schema, convert any message to hello world";
+    title: "Hello World Schema";
+    description: "Hello World schema is converting any message to hello world";
     properties: {
         hello: {
             type: "string";
