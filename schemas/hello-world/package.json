@@ -1,6 +1,6 @@
 {
   "name": "@functai-schemas/hello-world",
-  "version": "1.2.27",
+  "version": "1.2.28",
   "description": "Hello World schema for Functional AI",
   "main": "index.js",
   "scripts": {

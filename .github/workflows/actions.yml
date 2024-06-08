@@ -59,9 +59,14 @@ jobs:
           node-version: "20.x"
           registry-url: "https://registry.npmjs.org"
       - run: |
-          for path in ${{ needs.changes.outputs.schema_files  }}; do
-            dir=$(dirname $path)
-            cd $dir
+          paths="${{ needs.changes.outputs.schema_files  }}"
+          wd=$(echo $PWD)
+          for path in in ${paths}; do
+            cd $wd
+            filedir=$(dirname $path)
+            cd $filedir
+            npm ci
+            npm run build
             npm publish --access public
           done
         env:
