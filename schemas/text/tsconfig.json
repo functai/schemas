@@ -10,7 +10,9 @@
     "strict": true,
     "skipLibCheck": true,
     "noEmit": false,
-    "declaration": true
+    "declaration": true,
+    "allowArbitraryExtensions": true,
+    "pretty": true
   },
   "files": ["index.ts"]
 }

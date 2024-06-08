@@ -11,7 +11,8 @@
     "skipLibCheck": true,
     "noEmit": false,
     "declaration": true,
-    "allowArbitraryExtensions": true
+    "allowArbitraryExtensions": true,
+    "pretty": true
   },
   "files": ["index.ts"]
 }
