@@ -20,7 +20,7 @@ jobs:
           filters: |
             schemas:
               - \$schemas/**
-              - *.json
+              - '*.json'
   build_and_commit:
     needs: changes
     if: ${{ needs.changes.outputs.schemas == 'true' }}
