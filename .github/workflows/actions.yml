@@ -1,5 +1,5 @@
 name: FunctAI Schemas Action
-run-name: ${{ github.actor }} detect new schemas and publish it to npm 🚀
+run-name: FunctAI detect new schemas by ${{ github.actor }} and will publish to npm soon 🚀
 on:
   push:
     branches:
@@ -18,7 +18,7 @@ jobs:
           predicate-quantifier: "every"
           filters: |
             schemas:
-              - '$schemas/**'
+              - '\$schemas/**'
               - '!**/*.json'
   build_and_commit:
     needs: changes
