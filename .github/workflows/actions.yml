@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       schemas: ${{ steps.filter.outputs.schemas }}
+      schema_files: ${{ steps.filter.outputs.changes }}
     steps:
       - uses: actions/checkout@v4
       - uses: dorny/paths-filter@v3.0.2
@@ -30,7 +31,7 @@ jobs:
           node-version: "20.x"
           registry-url: "https://registry.npmjs.org"
       - run: |
-          for path in ${{ needs.changes.outputs.schemas }}; do
+          for path in ${{ needs.changes.outputs.schema_files  }}; do
             echo "$path"
           done
   # publish:
