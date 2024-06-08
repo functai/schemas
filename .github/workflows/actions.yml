@@ -19,7 +19,7 @@ jobs:
           predicate-quantifier: "every"
           filters: |
             schemas:
-              - '$schema/**'
+              - '$schemas/**'
               - '*.json'
   build_and_commit:
     needs: changes
