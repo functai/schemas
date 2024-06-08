@@ -19,7 +19,7 @@ jobs:
           predicate-quantifier: "every"
           filters: |
             schemas:
-              - 'schemas/**/*.json'
+              - 'schemas/**/package.json'
   build_and_commit:
     needs: changes
     if: ${{ needs.changes.outputs.schemas == 'true' }}
@@ -32,13 +32,13 @@ jobs:
           registry-url: "https://registry.npmjs.org"
       - run: |
           paths="${{ needs.changes.outputs.schema_files  }}"
-
+          wd=$( dirname "$PWD" )
           for path in ${paths}; do
+            cd $wd
             filedir=$(dirname $path)
             cd $filedir
             npm ci
             npm run build
-            cd /
           done
       - uses: EndBug/add-and-commit@v9
         with:
