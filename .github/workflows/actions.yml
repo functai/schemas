@@ -10,7 +10,7 @@ jobs:
     outputs:
       schemas: ${{ steps.filter.outputs.schemas }}
     steps:
-      - uses: dorny/paths-filter@v3
+      - uses: dorny/paths-filter@v3.0.2
         id: filter
         with:
           list-files: shell
