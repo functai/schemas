@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       schemas: ${{ steps.filter.outputs.schemas }}
-      schema_files: ${{ steps.filter.outputs.changes }}
+      schema_files: ${{ steps.filter.outputs.schemas_files }}
     steps:
       - uses: actions/checkout@v4
       - uses: dorny/paths-filter@v3.0.2
