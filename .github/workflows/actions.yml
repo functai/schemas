@@ -32,6 +32,8 @@ jobs:
           registry-url: "https://registry.npmjs.org"
       - run: |
           for path in ${{ needs.changes.outputs.schema_files  }}; do
+            dir=$(dirname $path)
+            cd $dir
             npm run build
           done
       - uses: EndBug/add-and-commit@v9
