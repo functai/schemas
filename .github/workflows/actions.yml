@@ -34,10 +34,11 @@ jobs:
           paths="${{ needs.changes.outputs.schema_files  }}"
 
           for path in ${paths}; do
-            dir=$(dirname $path)
-            cd $dir
+            filedir=$(dirname $path)
+            cd $filedir
             npm ci
             npm run build
+            cd ./
           done
       - uses: EndBug/add-and-commit@v9
         with:

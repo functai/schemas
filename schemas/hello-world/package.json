@@ -1,14 +1,13 @@
 {
   "name": "@functai-schemas/hello-world",
-  "version": "1.2.22",
+  "version": "1.2.23",
   "description": "Hello World schema for Functional AI",
   "main": "index.js",
   "scripts": {
     "create_schema": "echo \"declare const schema: $(cat schema.json); export default schema; export type Schema = typeof schema\" > schema.d.ts",
     "create_index": "echo \"import schema from './schema.json'; import { Schema } from './schema'; const _schema = { ...schema } as Schema; export default _schema;\" > index.ts",
-    "prettify_typescript": "tsc --pretty",
-    "build_typescript": "tsc",
-    "build": "run-s create_schema create_index prettify_typescript build_typescript",
+    "build_typescript": "tsc --pretty",
+    "build": "run-s create_schema create_index build_typescript",
     "test": "echo-cli \"Error: no test specified\" && exit 1"
   },
   "repository": {
